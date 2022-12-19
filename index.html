@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Interactive rating component - Kraze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="relative bg-black h-screen">
+      <main class="flex items-center justify-center h-full">
+        <!-- Main Card -->
+        <div
+          class="bg-slate-900 space-y-5 p-10 max-w-sm rounded-2xl"
+          id="mainCard"
+        >
+          <div class="space-y-5">
+            <!-- Star Image -->
+            <img
+              src="/images/icon-star.svg"
+              alt="icon-star"
+              class="p-2 bg-slate-700 rounded-2xl"
+            />
+
+            <h1 class="text-white text-2xl pt-3 font-semibold">
+              How did we do?
+            </h1>
+
+            <p class="text-slate-600">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </div>
+
+          <!-- Number lists -->
+          <div>
+            <ul class="flex justify-between">
+              <li>
+                <input
+                  type="radio"
+                  class="text-slate-600 peer hidden"
+                  value="1"
+                  name="option"
+                  id="1"
+                />
+                <label
+                  for="1"
+                  class="block cursor-pointer select-none bg-slate-800 rounded-full px-4 py-2 text-center hover:text-white hover:bg-orange-500 peer-checked:bg-slate-700 peer-checked:font-bold peer-checked:text-white"
+                >
+                  1
+                </label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  class="text-slate-600 peer hidden"
+                  value="2"
+                  name="option"
+                  id="2"
+                />
+                <label
+                  for="2"
+                  class="block cursor-pointer select-none bg-slate-800 rounded-full px-4 py-2 text-center hover:text-white hover:bg-orange-500 peer-checked:bg-slate-700 peer-checked:font-bold peer-checked:text-white"
+                >
+                  2
+                </label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  class="text-slate-600 peer hidden"
+                  value="3"
+                  name="option"
+                  id="3"
+                />
+                <label
+                  for="3"
+                  class="block cursor-pointer select-none bg-slate-800 rounded-full px-4 py-2 text-center hover:text-white hover:bg-orange-500 peer-checked:bg-slate-700 peer-checked:font-bold peer-checked:text-white"
+                >
+                  3
+                </label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  class="text-slate-600 peer hidden"
+                  value="4"
+                  name="option"
+                  id="4"
+                  checked
+                />
+                <label
+                  for="4"
+                  class="block cursor-pointer select-none bg-slate-800 rounded-full px-4 py-2 text-center hover:text-white hover:bg-orange-500 peer-checked:bg-slate-700 peer-checked:font-bold peer-checked:text-white"
+                >
+                  4
+                </label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  class="text-slate-600 peer hidden"
+                  value="5"
+                  name="option"
+                  id="5"
+                />
+                <label
+                  for="5"
+                  class="block cursor-pointer select-none bg-slate-800 rounded-full px-4 py-2 text-center hover:text-white hover:bg-orange-500 peer-checked:bg-slate-700 peer-checked:font-bold peer-checked:text-white"
+                >
+                  5
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Submit button -->
+          <div>
+            <button
+              id="btnSubmmit"
+              class="w-full bg-orange-500 text-white p-3 rounded-2xl hover:bg-white hover:text-orange-500 uppercase tracking-widest text-sm"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <!-- Thank You Card -->
+        <div
+          class="flex items-center justify-center max-w-sm hidden"
+          id="thanksCard"
+        >
+          <div class="bg-slate-900 space-y-5 p-10 rounded-2xl">
+            <div class="flex justify-center pb-5">
+              <img
+                src="/images/illustration-thank-you.svg"
+                alt="illustration-thank-you"
+              />
+            </div>
+            <div
+              class="rounded-2xl bg-slate-800 text-center text-orange-400 p-2"
+            >
+              You selected
+              <span id="result">4</span>
+              ou of 5
+            </div>
+            <div>
+              <h1 class="text-white text-2xl pt-3 text-center font-semibold">
+                Thank you!
+              </h1>
+            </div>
+            <div>
+              <p class="text-slate-600 text-center">
+                We appreciate you taking the time to give a rating. if you need
+                more support don't hesitate to get it touch!
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
